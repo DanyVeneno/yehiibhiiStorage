@@ -130,7 +130,7 @@ section button {
 
 .soundbutton {
   position: fixed;
-  bottom: 20vh;
+  bottom: 10vh;
   left: 49vw;
   cursor: pointer;
   width: 47px;
