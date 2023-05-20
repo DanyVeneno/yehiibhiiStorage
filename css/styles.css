@@ -1,0 +1,145 @@
+:root {
+  --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: var(--font-mono);*/
+  font-family: "Montserrat", sans-serif;
+
+  background-color: hsl(0, 0%, 4%);
+  background-image: radial-gradient(
+      650px circle at 0% 0%,
+      hsl(76, 41%, 35%) 15%,
+      hsl(66, 41%, 30%) 35%,
+      hsl(79, 41%, 20%) 75%,
+      hsl(71, 40%, 19%) 80%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1250px circle at 100% 100%,
+      hsl(69, 41%, 45%) 15%,
+      hsl(76, 41%, 30%) 35%,
+      hsl(71, 41%, 20%) 75%,
+      hsl(71, 40%, 19%) 80%,
+      transparent 100%
+    );
+}
+#titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+#titulo-registro {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+#titulo-home {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+section h1 {
+  font-size: 3em;
+}
+
+section h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
+section form {
+  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  border-radius: 20px;
+  border: 2px solid rgba(232, 241, 97, 0.1);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+section form label {
+  width: 100%;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+section form input {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.8em;
+  border-radius: 9px;
+  border: none;
+  outline-color: #003dff;
+  background-color: #eee;
+}
+
+section form input[type="submit"] {
+  margin-top: 1.5em;
+  /*background-color: #003dff;*/
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+section form input[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+section p {
+  margin-top: 1.5em;
+}
+
+section p a {
+  text-decoration: none;
+  color: #5eff00;
+}
+
+/* Home */
+
+section button {
+  /*background-color: #003dff;*/
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  transition: var(--transition);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 9px;
+  margin-top: 1.5em;
+  font-size: 1em;
+}
+
+.soundbutton {
+  position: fixed;
+  bottom: 20vh;
+  left: 49vw;
+  cursor: pointer;
+  width: 47px;
+  transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+}
+.soundbutton.paused {
+  opacity: 0.6;
+}

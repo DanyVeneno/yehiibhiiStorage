@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/x-icon" href="/img/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap");
+    </style>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Yehiibhii Estudio | Estas en Casa</title>
+  </head>
+  <body class="w-full md:w-auto">
+    <section>
+      <img src="img/yehiibhiiblue.png" alt="logo" class="w-80" />
+      <h4
+        class="text-xl font-bold mb-5 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 bg-gradient-to-r bg-clip-text text-transparent"
+      >
+        Visita Nuestro Sitio Web
+      </h4>
+      <span class="bg-slate-700 p-3 rounded-md">
+        <h3
+          class="z-10 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 bg-gradient-to-r bg-clip-text text-transparent"
+          id="titulo-home"
+        >
+          <a
+            href="https://juanitovenenoestudio.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@juanitovenenoestudio</a
+          >
+        </h3>
+      </span>
+      <button
+        id="logout"
+        class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 bg-gradient-to-r bg-clip-text text-transparent"
+      >
+        Salir de tu cuenta
+      </button>
+    </section>
+
+    <img class="soundbutton paused" src="img/sound.gif" alt="Alt" />
+    <audio class="audio" src="media/story.wav" loop></audio>
+    <script src="js/index.js"></script>
+    <script>
+      let soundButton = document.querySelector(".soundbutton"),
+        audio = document.querySelector(".audio");
+
+      soundButton.addEventListener("click", (e) => {
+        soundButton.classList.toggle("paused");
+        audio.paused ? audio.play() : audio.pause();
+      });
+
+      window.onfocus = function () {
+        soundButton.classList.contains("paused") ? audio.pause() : audio.play();
+      };
+
+      window.onblur = function () {
+        audio.pause();
+      };
+    </script>
+  </body>
+</html>
